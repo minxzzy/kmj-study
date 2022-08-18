@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    const root = document.getElementById("root");
+
+    const Container = () => (
+      <div>
+        <h3>Total clicks: 0</h3>
+        <button onClick={() => console.log("im clicked")}></button>
+      </div>
+    );
+    ReactDOM.render(<Container />, root);
+  </script>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script>
+    const root = document.getElementById("root");
+    // const Title = () => (
+    //   <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+    //     Hello I'm a span
+    //   </h3>
+    // ); 
+    function Title() {
+      return (
+        <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+          Hello I'm a span
+        </h3>
+      );
+    }
+    const Button = () => (
+      <button
+        style={{ backgrounedColor: "tomato" }}
+        onClick={() => console.log("im clicked")}
+      >
+        Click me
+      </button>
+    );
+    const Container = () => (
+      <div>
+        <button>Hello</button>
+        <Title /> <Button />
+      </div>
+    );
+    const container = React.createElement(<Container />, root);
+    ReactDOM.render(span, root);
+  </script>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script>
+    const root = document.getElementById("root");
+    // " 안에는 html과 같은 이름으로 " -> <span id = "sexy-span" style="color : "red">Hello</span>
+    const h3 = React.createElement(
+      "h3",
+      { id: "title", onMouseEnter: () => console.log("mouse enter") },
+      "Hello I'm a span"
+    );
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("im clicked"),
+        style: { backgrounedColor: "tomato" },
+      },
+      "Click me"
+    );
+    const container = React.createElement("div", null, [h3, btn]);
+    ReactDOM.render(span, root);
+  </script>
+</html> -->
